@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 140 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 140 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 30% 15%;
+
+    --primary: 135 60% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 90 40% 92%;
+    --secondary-foreground: 140 30% 15%;
+
+    --muted: 120 20% 95%;
+    --muted-foreground: 140 20% 45%;
+
+    --accent: 80 70% 50%;
+    --accent-foreground: 140 30% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 120 20% 88%;
+    --input: 120 20% 88%;
+    --ring: 135 60% 40%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --shadow-soft: 0 4px 20px -2px hsl(135 60% 40% / 0.1);
+    --shadow-card: 0 2px 12px -1px hsl(135 40% 30% / 0.08);
+    --gradient-fresh: linear-gradient(135deg, hsl(135 60% 45%), hsl(90 65% 55%));
+    --gradient-hero: linear-gradient(to bottom, hsl(120 40% 97%), hsl(0 0% 100%));
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 140 30% 8%;
+    --foreground: 120 20% 95%;
+
+    --card: 140 25% 12%;
+    --card-foreground: 120 20% 95%;
+
+    --popover: 140 25% 12%;
+    --popover-foreground: 120 20% 95%;
+
+    --primary: 135 55% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 140 20% 18%;
+    --secondary-foreground: 120 20% 95%;
+
+    --muted: 140 20% 18%;
+    --muted-foreground: 120 15% 65%;
+
+    --accent: 80 60% 55%;
+    --accent-foreground: 140 30% 15%;
+
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 120 20% 95%;
+
+    --border: 140 20% 20%;
+    --input: 140 20% 20%;
+    --ring: 135 55% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
